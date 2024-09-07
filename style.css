@@ -1,0 +1,117 @@
+/* Stili Generali */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Stili per index.html */
+.container-index {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+
+.container-index h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.container-index p {
+    margin-bottom: 20px;
+    color: #b0b0b0;
+    font-size: 1.2em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.load-button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6200ee;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(98, 0, 238, 0.5), 0 8px 24px rgba(98, 0, 238, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.load-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 8px 16px rgba(98, 0, 238, 0.6), 0 10px 30px rgba(98, 0, 238, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Stili per multistream.html */
+.stream-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.stream-box {
+    width: 48%;
+    height: calc(50vh - 20px);
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.chat-container iframe {
+    width: 48%;
+    height: 40vh;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
