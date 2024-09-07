@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Stream - Selezione Canali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-index">
+        <h1>Multi Stream</h1>
+        <p>Inserisci i nomi dei canali Twitch per visualizzare gli stream in parallelo.</p>
+        <div class="input-container">
+            <input type="text" id="channel1" placeholder="Nome canale 1">
+            <input type="text" id="channel2" placeholder="Nome canale 2">
+        </div>
+        <button class="load-button" onclick="loadStreams()">Carica Stream</button>
+    </div>
+
+    <script>
+        function loadStreams() {
+            const channel1 = document.getElementById('channel1').value;
+            const channel2 = document.getElementById('channel2').value;
+            if (channel1 && channel2) {
+                window.location.href = `multistream.html?channel1=${encodeURIComponent(channel1)}&channel2=${encodeURIComponent(channel2)}`;
+            } else {
+                alert('Inserisci i nomi di entrambi i canali.');
+            }
+        }
+    </script>
+</body>
+</html>
