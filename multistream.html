@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Stream - Visualizzazione</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stream-container">
+        <div class="stream-box">
+            <iframe id="stream1" allowfullscreen></iframe>
+        </div>
+        <div class="stream-box">
+            <iframe id="stream2" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="chat-container">
+        <iframe id="chat1" allowfullscreen></iframe>
+        <iframe id="chat2" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const channel1 = urlParams.get('channel1');
+        const channel2 = urlParams.get('channel2');
+
+        if (channel1 && channel2) {
+            document.getElementById('stream1').src = `https://player.twitch.tv/?channel=${channel1}&parent=vraaif.github.io`;
+            document.getElementById('stream2').src = `https://player.twitch.tv/?channel=${channel2}&parent=vraaif.github.io`;
+            document.getElementById('chat1').src = `https://www.twitch.tv/embed/${channel1}/chat?parent=vraaif.github.io`;
+            document.getElementById('chat2').src = `https://www.twitch.tv/embed/${channel2}/chat?parent=vraaif.github.io`;
+        }
+    </script>
+</body>
+</html>
